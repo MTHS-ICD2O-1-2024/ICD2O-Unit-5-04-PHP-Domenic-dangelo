@@ -35,14 +35,15 @@
           <?php
           //input
           $inputAge = $_GET["userAge"];
+          $day = $_GET["day"];
           
           // process
-          if ($movieAgeRating >= 17) {
+          if ($day == "tuesday" || $day == "thursday" || ($inputAge >= 12 && $inputAge <= 21)) {
             // output
-            echo "You can see R rated movies.";
+            echo "You are eligible for student discount.";
           }
           else {
-            echo "You are to young to see most things.";
+            echo "You must pay full price.";
           }
           ?>
           <div class="page-content-answer">
